@@ -6,15 +6,15 @@
 /*   By: jcarpio- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/11 18:38:38 by jcarpio-          #+#    #+#             */
-/*   Updated: 2019/02/11 18:51:31 by jcarpio-         ###   ########.fr       */
+/*   Updated: 2019/02/17 15:02:36 by jcarpio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-char 	*ft_strndup(const char *s1, size_t n)
+char		*ft_strndup(const char *s1, size_t n)
 {
-	char 	*tmp;
+	char	*tmp;
 
 	if (!(tmp = ft_strnew(n)))
 		return (NULL);

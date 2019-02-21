@@ -6,7 +6,7 @@
 /*   By: jcarpio- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/13 09:45:38 by jcarpio-          #+#    #+#             */
-/*   Updated: 2019/02/15 11:51:57 by jcarpio-         ###   ########.fr       */
+/*   Updated: 2019/02/15 14:47:26 by jcarpio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		return (NULL);
 	i = -1;
 	while (*(s + ++i))
-			*(new_str + i) = f(i,*(s + i));
+		*(new_str + i) = f(i, *(s + i));
 	return (new_str);
 }

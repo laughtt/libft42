@@ -6,7 +6,7 @@
 /*   By: jcarpio- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/14 13:09:26 by jcarpio-          #+#    #+#             */
-/*   Updated: 2019/02/15 11:16:56 by jcarpio-         ###   ########.fr       */
+/*   Updated: 2019/02/15 14:43:46 by jcarpio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 			free(list->next);
 			return (NULL);
 		}
-		list = list ->next;
+		list = list->next;
 	}
 	return (new);
 }

@@ -6,7 +6,7 @@
 /*   By: jcarpio- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/11 11:22:07 by jcarpio-          #+#    #+#             */
-/*   Updated: 2019/02/14 23:03:00 by jcarpio-         ###   ########.fr       */
+/*   Updated: 2019/02/15 14:51:51 by jcarpio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,12 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	char *ptr;
-	size_t i;
+	char		*ptr;
+	size_t		i;
 
-	ptr = (char *) b;
+	ptr = (char *)b;
 	i = 0;
 	while (i < len)
-	{
-		*(ptr  + i++) = c;
-	}
+		*(ptr + i++) = c;
 	return (b);
 }

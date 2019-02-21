@@ -6,13 +6,13 @@
 /*   By: jcarpio- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/13 11:58:59 by jcarpio-          #+#    #+#             */
-/*   Updated: 2019/02/15 12:33:30 by jcarpio-         ###   ########.fr       */
+/*   Updated: 2019/02/15 15:17:31 by jcarpio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-static	int		ft_countwords(char const *str, char c)
+static int	ft_countwords(char const *str, char c)
 {
 	int		count;
 	int		i;
@@ -30,7 +30,8 @@ static	int		ft_countwords(char const *str, char c)
 	}
 	return (count);
 }
-static int		get_word_len(char const *str, char c)
+
+static int	get_word_len(char const *str, char c)
 {
 	int		i;
 	int		len;
@@ -39,7 +40,7 @@ static int		get_word_len(char const *str, char c)
 	len = 0;
 	while (str[i] == c)
 		i++;
-	while (str[i] != c && str [i] != '\0')
+	while (str[i] != c && str[i] != '\0')
 	{
 		i++;
 		len++;
@@ -49,26 +50,26 @@ static int		get_word_len(char const *str, char c)
 
 char		**ft_strsplit(char const *s, char c)
 {
-	int			i;
-	int 		j;
-	int			k;
-	char		**str2;
+	int		i;
+	int		j;
+	int		k;
+	char	**str2;
 
-	if (!s || !(str2 = (char **)malloc(sizeof(*str2)*
-			(ft_countwords(s, c) + 1))))
+	if (!s || !(str2 = (char **)malloc(sizeof(*str2) * \
+					(ft_countwords(s, c) + 1))))
 		return (NULL);
 	i = -1;
 	j = 0;
-	while (++i < ft_countwords(s,c))
+	while (++i < ft_countwords(s, c))
 	{
-		 k = 0;
-		 if (!(str2[i] = ft_strnew(get_word_len(&s[j], c) + 1)))
-			 str2[i] = NULL;
-		 while (s[j] == c)
-			 j++;
-		 while (s[j] != c && s[j])
-			 str2[i][k++] = s[j++];
-		 str2[i][k] = '\0';
+		k = 0;
+		if (!(str2[i] = ft_strnew(get_word_len(&s[j], c) + 1)))
+			str2[i] = NULL;
+		while (s[j] == c)
+			j++;
+		while (s[j] != c && s[j])
+			str2[i][k++] = s[j++];
+		str2[i][k] = '\0';
 	}
 	str2[i] = 0;
 	return (str2);

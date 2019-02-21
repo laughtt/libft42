@@ -6,15 +6,15 @@
 /*   By: jcarpio- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/13 14:11:52 by jcarpio-          #+#    #+#             */
-/*   Updated: 2019/02/15 11:47:41 by jcarpio-         ###   ########.fr       */
+/*   Updated: 2019/02/15 15:20:18 by jcarpio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-static	int		get_str_len(int n)
+static	int			get_str_len(int n)
 {
-	size_t 		i;
+	size_t			i;
 
 	i = 1;
 	while (n /= 10)
@@ -22,7 +22,7 @@ static	int		get_str_len(int n)
 	return (i);
 }
 
-char	*ft_itoa(int n)
+char				*ft_itoa(int n)
 {
 	char			*str;
 	size_t			str_len;

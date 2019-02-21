@@ -6,7 +6,7 @@
 /*   By: jcarpio- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/13 15:11:33 by jcarpio-          #+#    #+#             */
-/*   Updated: 2019/02/15 11:23:38 by jcarpio-         ###   ########.fr       */
+/*   Updated: 2019/02/15 15:18:37 by jcarpio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 void		ft_putendl_fd(char const *s, int fd)
 {
-	ft_putstr_fd(ft_strjoin(s,"\n"), fd);
+	ft_putstr_fd(ft_strjoin(s, "\n"), fd);
 }

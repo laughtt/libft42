@@ -6,7 +6,7 @@
 /*   By: jcarpio- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/13 14:03:30 by jcarpio-          #+#    #+#             */
-/*   Updated: 2019/02/13 15:19:42 by jcarpio-         ###   ########.fr       */
+/*   Updated: 2019/02/15 14:09:36 by jcarpio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	ft_putnbr_fd(int n, int fd)
 	if (n >= 10)
 	{
 		ft_putnbr_fd(n / 10, fd);
-		ft_putnbr_fd(n & 10, fd);
+		ft_putnbr_fd(n % 10, fd);
 	}
 	else
 		ft_putchar_fd(n + '0', fd);

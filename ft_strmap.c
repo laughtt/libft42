@@ -6,7 +6,7 @@
 /*   By: jcarpio- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/12 17:01:56 by jcarpio-          #+#    #+#             */
-/*   Updated: 2019/02/13 10:11:02 by jcarpio-         ###   ########.fr       */
+/*   Updated: 2019/02/15 15:07:05 by jcarpio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strmap(char const *s, char (*f)(char))
 {
-	char 	*new_str;
-	char	i;
+	char		*new_str;
+	char		i;
 
 	if (!s)
 		return (NULL);

@@ -6,44 +6,35 @@
 /*   By: jcarpio- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/14 20:33:57 by jcarpio-          #+#    #+#             */
-/*   Updated: 2019/02/15 11:49:18 by jcarpio-         ###   ########.fr       */
+/*   Updated: 2019/02/15 14:25:30 by jcarpio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-static	int		has_whitespaces(char *str, int *i, size_t *j)
-{
-	while (IS_SPACE(*(str + *i)))
-		(*i)++;
-	while (IS_SPACE(*(str + *j)))
-		(*j)--;
-	if (*i || *j < ft_strlen(str))
-		return (1);
-	return (0);
-}
-
-char		*ft_strtrim(char const *s)
+char	*ft_strtrim(char const *s)
 {
 	int			i;
-	size_t		j;
-	int			k;
-	char 		*new_str;
-	size_t		new_size;
+	int			len;
+	char		*str;
 
-	if (!s)
+	if (s == NULL)
 		return (NULL);
-	i = 0;
-	k = 0;
-	j = ft_strlen(s) - 1;
-	if (!has_whitespaces((char *)s, &i, &j) || !ft_strlen(s))
-		return ((char *)s);
-	new_size = (i == (int)ft_strlen(s)) ? 0 : ft_strlen(s) - (size_t)i - \
-			   (ft_strlen(s) - j);
-	new_str = ft_strnew(new_size + 1);
-	if (!new_str)
+	len = ft_strlen(s);
+	while (s[len - 1] == ' ' || s[len - 1] == '\t' || s[len - 1] == '\n')
+		len--;
+	i = -1;
+	while (s[++i] == ' ' || s[i] == '\t' || s[i] == '\n')
+		len--;
+	if (len <= 0)
+		len = 0;
+	str = (char*)malloc(sizeof(char) * (len + 1));
+	if (!str)
 		return (NULL);
-	while (i <= (int)j)
-		*(new_str + k++) = *(s + i++);
-	return (new_str);
+	s += i;
+	i = -1;
+	while (++i < len)
+		str[i] = *s++;
+	str[i] = '\0';
+	return (str);
 }
