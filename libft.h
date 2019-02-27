@@ -6,7 +6,7 @@
 /*   By: jcarpio- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/13 15:35:27 by jcarpio-          #+#    #+#             */
-/*   Updated: 2019/02/15 12:28:32 by jcarpio-         ###   ########.fr       */
+/*   Updated: 2019/02/27 11:37:27 by jcarpio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 # include <unistd.h>
 # include <stdlib.h>
 
-# define BUFF_SIZE 100
 # define MALLCHECK(x) if (!x) return (-1);
 # define IS_SPACE(x) (x == ' ' || x == '\t' || x == '\r' || x == '\f')
 
